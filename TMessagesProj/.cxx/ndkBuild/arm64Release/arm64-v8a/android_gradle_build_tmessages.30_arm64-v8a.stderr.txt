@@ -1,0 +1,122 @@
+In file included from /Users/test/StudioProjects/Telegram/TMessagesProj/jni/./rlottie/src/lottie/lottieparser.cpp:58:
+In file included from /Users/test/StudioProjects/Telegram/TMessagesProj/jni/tgnet/FileLog.h:12:
+/Users/test/StudioProjects/Telegram/TMessagesProj/jni/tgnet/Defines.h:136:16: warning: 'ConnectiosManagerDelegate' has virtual functions but non-virtual destructor [-Wnon-virtual-dtor]
+typedef struct ConnectiosManagerDelegate {
+               ^
+/Users/test/StudioProjects/Telegram/TMessagesProj/jni/tgnet/Defines.h:152:16: warning: 'HandshakeDelegate' has virtual functions but non-virtual destructor [-Wnon-virtual-dtor]
+typedef struct HandshakeDelegate {
+               ^
+In file included from /Users/test/StudioProjects/Telegram/TMessagesProj/jni/./rlottie/src/vector/vraster.cpp:22:
+In file included from /Users/test/StudioProjects/Telegram/TMessagesProj/jni/tgnet/FileLog.h:12:
+/Users/test/StudioProjects/Telegram/TMessagesProj/jni/tgnet/Defines.h:136:16: warning: 'ConnectiosManagerDelegate' has virtual functions but non-virtual destructor [-Wnon-virtual-dtor]
+typedef struct ConnectiosManagerDelegate {
+               ^
+/Users/test/StudioProjects/Telegram/TMessagesProj/jni/tgnet/Defines.h:152:16: warning: 'HandshakeDelegate' has virtual functions but non-virtual destructor [-Wnon-virtual-dtor]
+typedef struct HandshakeDelegate {
+               ^
+In file included from /Users/test/StudioProjects/Telegram/TMessagesProj/jni/libtgvoip/./MediaStreamItf.cpp:8:
+In file included from /Users/test/StudioProjects/Telegram/TMessagesProj/jni/libtgvoip/MediaStreamItf.h:14:
+/Users/test/StudioProjects/Telegram/TMessagesProj/jni/libtgvoip/threading.h:110:8: warning: private field 'maxPriority' is not used [-Wunused-private-field]
+                bool maxPriority=false;
+                     ^
+In file included from /Users/test/StudioProjects/Telegram/TMessagesProj/jni/libtgvoip/./audio/AudioOutput.cpp:19:
+/Users/test/StudioProjects/Telegram/TMessagesProj/jni/libtgvoip/./audio/../os/android/AudioOutputAndroid.h:20:15: warning: 'Start' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+        virtual void Start();
+                     ^
+/Users/test/StudioProjects/Telegram/TMessagesProj/jni/libtgvoip/./audio/../MediaStreamItf.h:24:15: note: overridden virtual function is here
+        virtual void Start()=0;
+                     ^
+In file included from /Users/test/StudioProjects/Telegram/TMessagesProj/jni/libtgvoip/./audio/AudioOutput.cpp:19:
+/Users/test/StudioProjects/Telegram/TMessagesProj/jni/libtgvoip/./audio/../os/android/AudioOutputAndroid.h:21:15: warning: 'Stop' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+        virtual void Stop();
+                     ^
+/Users/test/StudioProjects/Telegram/TMessagesProj/jni/libtgvoip/./audio/../MediaStreamItf.h:25:15: note: overridden virtual function is here
+        virtual void Stop()=0;
+                     ^
+In file included from /Users/test/StudioProjects/Telegram/TMessagesProj/jni/libtgvoip/./audio/AudioOutput.cpp:7:
+In file included from /Users/test/StudioProjects/Telegram/TMessagesProj/jni/libtgvoip/./audio/../os/android/../../audio/AudioOutput.h:14:
+In file included from /Users/test/StudioProjects/Telegram/TMessagesProj/jni/libtgvoip/./audio/../MediaStreamItf.h:14:
+/Users/test/StudioProjects/Telegram/TMessagesProj/jni/libtgvoip/threading.h:110:8: warning: private field 'maxPriority' is not used [-Wunused-private-field]
+                bool maxPriority=false;
+                     ^
+3 warnings generated.
+2 warnings generated.
+In file included from /Users/test/StudioProjects/Telegram/TMessagesProj/jni/libtgvoip/./OpusEncoder.cpp:7:
+In file included from /Users/test/StudioProjects/Telegram/TMessagesProj/jni/libtgvoip/OpusEncoder.h:11:
+In file included from /Users/test/StudioProjects/Telegram/TMessagesProj/jni/libtgvoip/MediaStreamItf.h:14:
+/Users/test/StudioProjects/Telegram/TMessagesProj/jni/libtgvoip/threading.h:110:8: warning: private field 'maxPriority' is not used [-Wunused-private-field]
+                bool maxPriority=false;
+                     ^
+1 warning generated.
+In file included from /Users/test/StudioProjects/Telegram/TMessagesProj/jni/libtgvoip/./os/android/AudioOutputOpenSLES.cpp:10:
+In file included from /Users/test/StudioProjects/Telegram/TMessagesProj/jni/libtgvoip/./os/android/AudioOutputOpenSLES.h:13:
+In file included from /Users/test/StudioProjects/Telegram/TMessagesProj/jni/libtgvoip/audio/AudioOutput.h:14:
+In file included from /Users/test/StudioProjects/Telegram/TMessagesProj/jni/libtgvoip/MediaStreamItf.h:14:
+/Users/test/StudioProjects/Telegram/TMessagesProj/jni/libtgvoip/./os/android/../../threading.h:110:8: warning: private field 'maxPriority' is not used [-Wunused-private-field]
+                bool maxPriority=false;
+                     ^
+1 warning generated.
+In file included from /Users/test/StudioProjects/Telegram/TMessagesProj/jni/libtgvoip/./JitterBuffer.cpp:7:
+In file included from /Users/test/StudioProjects/Telegram/TMessagesProj/jni/libtgvoip/VoIPController.h:24:
+In file included from /Users/test/StudioProjects/Telegram/TMessagesProj/jni/libtgvoip/video/VideoSource.h:12:
+In file included from /Users/test/StudioProjects/Telegram/TMessagesProj/jni/libtgvoip/Buffers.h:19:
+/Users/test/StudioProjects/Telegram/TMessagesProj/jni/libtgvoip/threading.h:110:8: warning: private field 'maxPriority' is not used [-Wunused-private-field]
+                bool maxPriority=false;
+                     ^
+1 warning generated.
+In file included from /Users/test/StudioProjects/Telegram/TMessagesProj/jni/libtgvoip/./os/android/AudioOutputAndroid.cpp:7:
+/Users/test/StudioProjects/Telegram/TMessagesProj/jni/libtgvoip/./os/android/AudioOutputAndroid.h:20:15: warning: 'Start' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+        virtual void Start();
+                     ^
+/Users/test/StudioProjects/Telegram/TMessagesProj/jni/libtgvoip/./os/android/../../audio/../MediaStreamItf.h:24:15: note: overridden virtual function is here
+        virtual void Start()=0;
+                     ^
+In file included from /Users/test/StudioProjects/Telegram/TMessagesProj/jni/libtgvoip/./os/android/AudioOutputAndroid.cpp:7:
+/Users/test/StudioProjects/Telegram/TMessagesProj/jni/libtgvoip/./os/android/AudioOutputAndroid.h:21:15: warning: 'Stop' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+        virtual void Stop();
+                     ^
+/Users/test/StudioProjects/Telegram/TMessagesProj/jni/libtgvoip/./os/android/../../audio/../MediaStreamItf.h:25:15: note: overridden virtual function is here
+        virtual void Stop()=0;
+                     ^
+In file included from /Users/test/StudioProjects/Telegram/TMessagesProj/jni/libtgvoip/./os/android/AudioOutputAndroid.cpp:7:
+In file included from /Users/test/StudioProjects/Telegram/TMessagesProj/jni/libtgvoip/./os/android/AudioOutputAndroid.h:11:
+In file included from /Users/test/StudioProjects/Telegram/TMessagesProj/jni/libtgvoip/./os/android/../../audio/AudioOutput.h:14:
+In file included from /Users/test/StudioProjects/Telegram/TMessagesProj/jni/libtgvoip/./os/android/../../audio/../MediaStreamItf.h:14:
+/Users/test/StudioProjects/Telegram/TMessagesProj/jni/libtgvoip/threading.h:110:8: warning: private field 'maxPriority' is not used [-Wunused-private-field]
+                bool maxPriority=false;
+                     ^
+3 warnings generated.
+In file included from /Users/test/StudioProjects/Telegram/TMessagesProj/jni/libtgvoip/./OpusDecoder.cpp:7:
+In file included from /Users/test/StudioProjects/Telegram/TMessagesProj/jni/libtgvoip/OpusDecoder.h:11:
+In file included from /Users/test/StudioProjects/Telegram/TMessagesProj/jni/libtgvoip/audio/../MediaStreamItf.h:14:
+/Users/test/StudioProjects/Telegram/TMessagesProj/jni/libtgvoip/threading.h:110:8: warning: private field 'maxPriority' is not used [-Wunused-private-field]
+                bool maxPriority=false;
+                     ^
+In file included from /Users/test/StudioProjects/Telegram/TMessagesProj/jni/libtgvoip/./EchoCanceller.cpp:12:
+In file included from /Users/test/StudioProjects/Telegram/TMessagesProj/jni/libtgvoip/EchoCanceller.h:10:
+/Users/test/StudioProjects/Telegram/TMessagesProj/jni/libtgvoip/threading.h:110:8: warning: private field 'maxPriority' is not used [-Wunused-private-field]
+                bool maxPriority=false;
+                     ^
+In file included from /Users/test/StudioProjects/Telegram/TMessagesProj/jni/libtgvoip/./os/android/AudioInputAndroid.cpp:7:
+In file included from /Users/test/StudioProjects/Telegram/TMessagesProj/jni/libtgvoip/./os/android/AudioInputAndroid.h:11:
+In file included from /Users/test/StudioProjects/Telegram/TMessagesProj/jni/libtgvoip/./os/android/../../audio/AudioInput.h:13:
+In file included from /Users/test/StudioProjects/Telegram/TMessagesProj/jni/libtgvoip/./os/android/../../audio/../MediaStreamItf.h:14:
+/Users/test/StudioProjects/Telegram/TMessagesProj/jni/libtgvoip/./os/android/../../threading.h:110:8: warning: private field 'maxPriority' is not used [-Wunused-private-field]
+                bool maxPriority=false;
+                     ^
+1 warning generated.
+In file included from /Users/test/StudioProjects/Telegram/TMessagesProj/jni/libtgvoip/./CongestionControl.cpp:7:
+In file included from /Users/test/StudioProjects/Telegram/TMessagesProj/jni/libtgvoip/CongestionControl.h:12:
+/Users/test/StudioProjects/Telegram/TMessagesProj/jni/libtgvoip/threading.h:110:8: warning: private field 'maxPriority' is not used [-Wunused-private-field]
+                bool maxPriority=false;
+                     ^
+1 warning generated.
+1 warning generated.
+In file included from /Users/test/StudioProjects/Telegram/TMessagesProj/jni/libtgvoip/./VoIPServerConfig.cpp:7:
+In file included from /Users/test/StudioProjects/Telegram/TMessagesProj/jni/libtgvoip/VoIPServerConfig.h:13:
+/Users/test/StudioProjects/Telegram/TMessagesProj/jni/libtgvoip/threading.h:110:8: warning: private field 'maxPriority' is not used [-Wunused-private-field]
+                bool maxPriority=false;
+                     ^
+1 warning generated.
+1 warning generated.
+1 warning generated.

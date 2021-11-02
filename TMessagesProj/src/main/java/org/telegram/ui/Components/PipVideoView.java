@@ -19,7 +19,9 @@ import android.graphics.Canvas;
 import android.graphics.Paint;
 import android.graphics.PixelFormat;
 import android.os.Build;
+
 import androidx.annotation.Keep;
+
 import android.view.Gravity;
 import android.view.MotionEvent;
 import android.view.TextureView;
@@ -350,10 +352,10 @@ public class PipVideoView {
         };
 
         if (aspectRatio > 1) {
-            videoWidth = AndroidUtilities.dp(192);
+            videoWidth = AndroidUtilities.getScreenWidth(windowView.getContext());
             videoHeight = (int) (videoWidth / aspectRatio);
         } else {
-            videoHeight = AndroidUtilities.dp(192);
+            videoHeight = AndroidUtilities.getScreenHeight(windowView.getContext());
             videoWidth = (int) (videoHeight * aspectRatio);
         }
 
@@ -403,7 +405,9 @@ public class PipVideoView {
             } else {
                 windowLayoutParams.type = WindowManager.LayoutParams.TYPE_SYSTEM_ALERT;
             }
-            windowLayoutParams.flags = WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE | WindowManager.LayoutParams.FLAG_HARDWARE_ACCELERATED | WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS;
+            windowLayoutParams.flags =
+                    WindowManager.LayoutParams.FLAG_LAYOUT_IN_SCREEN | WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE
+                            | WindowManager.LayoutParams.FLAG_HARDWARE_ACCELERATED | WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS | WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS;
             windowManager.addView(windowView, windowLayoutParams);
         } catch (Exception e) {
             FileLog.e(e);
@@ -445,18 +449,18 @@ public class PipVideoView {
         if (isX) {
             total = AndroidUtilities.displaySize.x - sideSize;
         } else {
-            total = AndroidUtilities.displaySize.y - sideSize - ActionBar.getCurrentActionBarHeight();
+            total = AndroidUtilities.displaySize.y - sideSize;
         }
-        int result;
+        int result = 0;
         if (side == 0) {
-            result = AndroidUtilities.dp(10);
+//            result = AndroidUtilities.dp(10);
         } else if (side == 1) {
-            result = total - AndroidUtilities.dp(10);
+            result = total;
         } else {
             result = Math.round((total - AndroidUtilities.dp(20)) * p) + AndroidUtilities.dp(10);
         }
         if (!isX) {
-            result += ActionBar.getCurrentActionBarHeight();
+//            result += ActionBar.getCurrentActionBarHeight();
         }
         return result;
     }
@@ -524,7 +528,7 @@ public class PipVideoView {
             editor.putInt("sidex", 2);
         }
         if (!slideOut) {
-            if (Math.abs(startY - windowLayoutParams.y) <= maxDiff || windowLayoutParams.y <= ActionBar.getCurrentActionBarHeight()) {
+            if (Math.abs(startY - windowLayoutParams.y) <= maxDiff || windowLayoutParams.y <= 0) {
                 if (animators == null) {
                     animators = new ArrayList<>();
                 }

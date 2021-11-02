@@ -45,8 +45,11 @@ import android.provider.CallLog;
 import android.provider.DocumentsContract;
 import android.provider.MediaStore;
 import android.provider.Settings;
+
+import androidx.annotation.RequiresApi;
 import androidx.core.content.FileProvider;
 import androidx.viewpager.widget.ViewPager;
+
 import android.telephony.TelephonyManager;
 import android.text.Selection;
 import android.text.Spannable;
@@ -206,6 +209,44 @@ public class AndroidUtilities {
             R.drawable.media_doc_yellow_b
     };
 
+    /**
+     * Get Screen Width
+     */
+    public static int getScreenWidth(Context context) {
+        DisplayMetrics out=new DisplayMetrics();
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR1) {
+            getDisplay(context).getRealMetrics(out);
+        }
+        return out.widthPixels;
+    }
+
+    /**
+     * Get Screen Height
+     */
+    public static int getScreenHeight(Context context) {
+        DisplayMetrics out=new DisplayMetrics();
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR1) {
+            getDisplay(context).getRealMetrics(out);
+        }
+        return out.heightPixels;
+    }
+
+    /**
+     * Get Display（限Activity类型的Context）
+     *
+     * @param activity Activity for get WindowManager
+     * @return Display
+     */
+    private static Display getDisplay(Context activity) {
+        //WindowManager wm = (WindowManager) activity.getSystemService(Context.WINDOW_SERVICE);
+        WindowManager wm = (WindowManager) activity.getSystemService(Context.WINDOW_SERVICE);
+        if (wm != null) {
+            return wm.getDefaultDisplay();
+        } else {
+            return null;
+        }
+    }
+
     public static int getThumbForNameOrMime(String name, String mime, boolean media) {
         if (name != null && name.length() != 0) {
             int color = -1;
@@ -215,7 +256,7 @@ public class AndroidUtilities {
                 color = 1;
             } else if (name.contains(".pdf") || name.contains(".ppt") || name.contains(".key")) {
                 color = 2;
-            } else if (name.contains(".zip") || name.contains(".rar") || name.contains(".ai") || name.contains(".mp3")  || name.contains(".mov") || name.contains(".avi")) {
+            } else if (name.contains(".zip") || name.contains(".rar") || name.contains(".ai") || name.contains(".mp3") || name.contains(".mov") || name.contains(".avi")) {
                 color = 3;
             }
             if (color == -1) {
@@ -1729,28 +1770,28 @@ public class AndroidUtilities {
     }*/
 
     public static void checkForCrashes(Activity context) {
-        try {
-            CrashManager.register(context, BuildVars.DEBUG_VERSION ? BuildVars.HOCKEY_APP_HASH_DEBUG : BuildVars.HOCKEY_APP_HASH, new CrashManagerListener() {
-                @Override
-                public boolean includeDeviceData() {
-                    return true;
-                }
-            });
-        } catch (Throwable e) {
-            FileLog.e(e);
-        }
+//        try {
+//            CrashManager.register(context, BuildVars.DEBUG_VERSION ? BuildVars.HOCKEY_APP_HASH_DEBUG : BuildVars.HOCKEY_APP_HASH, new CrashManagerListener() {
+//                @Override
+//                public boolean includeDeviceData() {
+//                    return true;
+//                }
+//            });
+//        } catch (Throwable e) {
+//            FileLog.e(e);
+//        }
     }
 
     public static void checkForUpdates(Activity context) {
-        if (BuildVars.DEBUG_VERSION) {
-            UpdateManager.register(context, BuildVars.DEBUG_VERSION ? BuildVars.HOCKEY_APP_HASH_DEBUG : BuildVars.HOCKEY_APP_HASH);
-        }
+//        if (BuildVars.DEBUG_VERSION) {
+//            UpdateManager.register(context, BuildVars.DEBUG_VERSION ? BuildVars.HOCKEY_APP_HASH_DEBUG : BuildVars.HOCKEY_APP_HASH);
+//        }
     }
 
     public static void unregisterUpdates() {
-        if (BuildVars.DEBUG_VERSION) {
-            UpdateManager.unregister();
-        }
+//        if (BuildVars.DEBUG_VERSION) {
+//            UpdateManager.unregister();
+//        }
     }
 
     public static void addToClipboard(CharSequence str) {
@@ -2663,7 +2704,7 @@ public class AndroidUtilities {
         hsb[1] = Math.min(1.0f, hsb[1] + 0.05f);
         if (hsb[2] > 0.5f) {
             hsb[2] = Math.max(0.0f, hsb[2] * 0.90f);
-        } else{
+        } else {
             hsb[2] = Math.max(0.0f, hsb[2] * 0.90f);
         }
         return HSBtoRGB(hsb[0], hsb[1], hsb[2]) | 0xff000000;
